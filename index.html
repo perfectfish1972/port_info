@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<title>Port Visit — Charleston, SC</title>
+<meta name="description" content="UNCLASSIFIED, mobile-first quick-reference for port visits.">
+<style>
+  :root{
+    --bg:#f6f7fb; --panel:#ffffff; --text:#0b1726; --muted:#5b6b7b; --border:#e3e8f1; --chip:#f1f4f9;
+    --accent:#1f4fbf; --accent-2:#f4c542; /* FRR blue & gold */
+  }
+  :root[data-theme="dark"], @media (prefers-color-scheme: dark){
+    --bg:#0b121b; --panel:#101826; --text:#e6eef7; --muted:#9fb0c3; --border:#1e2a3a; --chip:#172233;
+    --accent:#4e7aff; --accent-2:#ffd46a;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;max-width:100%;overflow-x:hidden;-webkit-text-size-adjust:100%;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:900px;margin:0 auto;padding:14px 16px;padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+  .muted{color:var(--muted)} .small{font-size:.9rem}
+  .badge{display:inline-block;padding:.25rem .6rem;border-radius:999px;background:var(--chip);border:1px solid var(--border);font-size:.8rem;font-weight:700}
+  header.site{position:sticky;top:0;z-index:10;border-bottom:1px solid var(--border);background:
+    radial-gradient(1000px 260px at 18% -40%, var(--accent-2) 0%, transparent 60%),
+    radial-gradient(800px 200px at 100% -60%, var(--accent) 0%, transparent 60%), var(--bg)}
+  header.site .row{display:flex;align-items:center;gap:12px}
+  .crest{width:56px;height:56px;border-radius:50%;border:1px solid var(--border);background:#fff;object-fit:contain;box-shadow:0 3px 10px rgba(0,0,0,.08)}
+  .id{display:flex;flex-direction:column;min-width:0}
+  .ship{font-weight:800}
+  h1{margin:.15rem 0 0;font-size:1.22rem;line-height:1.2}
+  .meta{display:flex;gap:.5rem;flex-wrap:wrap;color:var(--muted);font-size:.9rem;margin:.25rem 0 0}
+  .meta strong{color:var(--text)}
+  .tbtn{position:absolute;right:12px;top:12px;min-height:36px;padding:8px 10px;border-radius:999px;border:1px solid var(--border);background:var(--chip);color:var(--text)}
+  /* Tabs */
+  .tabs{position:sticky;top:78px;z-index:9;background:var(--bg);border-bottom:1px solid var(--border)}
+  .tabbar{display:flex;overflow:auto;gap:8px;padding:8px 16px}
+  .tab{white-space:nowrap;padding:10px 14px;border-radius:999px;border:1px solid var(--border);background:var(--panel);min-height:40px}
+  .tab[aria-selected="true"]{outline:2px solid var(--accent)}
+  main{padding-bottom:32px}
+  .section{margin:16px 0;border:1px solid var(--border);border-radius:16px;background:var(--panel);box-shadow:0 4px 14px rgba(0,0,0,.04);overflow:hidden}
+  .section header{padding:12px 14px;font-weight:800;border-bottom:1px solid var(--border);background:linear-gradient(180deg,var(--chip),transparent)}
+  .section .content{padding:12px 14px;display:grid;gap:10px}
+  .kv{display:grid;grid-template-columns:120px 1fr;gap:8px}
+  @media(max-width:420px){.kv{grid-template-columns:110px 1fr}}
+  footer.site{border-top:1px solid var(--border);padding:16px 0 26px}
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <button id="theme-toggle" class="tbtn" aria-label="Toggle theme">🌙</button>
+    <div class="row">
+      <img id="crest" class="crest" src="assets/crest.png" alt="Ship crest for HMCS Frédérick Rolette"/>
+      <div class="id">
+        <div class="ship" id="ship-name">HMCS Frédérick Rolette</div>
+        <h1 id="title">Port Visit — <span id="city">Charleston, SC</span></h1>
+        <div class="meta">
+          <span>Local (<span id="tz-abbr">—</span>): <strong id="local-time">—:—</strong></span>
+          <span>•</span>
+          <span>Halifax: <strong id="hal-time">—:—</strong></span>
+          <span>•</span>
+          <span>Updated: <time id="last-upd" datetime="">Set on publish</time></span>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <nav class="tabs" aria-label="Sections">
+    <div class="tabbar wrap">
+      <a class="tab" href="#schedule" role="tab" aria-selected="true">🕒 Schedule & Timings</a>
+      <a class="tab" href="#primary" role="tab" aria-selected="false">📞 Primary Numbers</a>
+      <a class="tab" href="#medical" role="tab" aria-selected="false">🚑 Medical</a>
+      <a class="tab" href="#maps" role="tab" aria-selected="false" style="outline-color:#7c3aed">🗺️ Maps & Local</a>
+      <a class="tab" href="#enjoy" role="tab" aria-selected="false">🎉 Enjoy</a>
+      <a class="tab" href="#notices" role="tab" aria-selected="false">📢 Notices</a>
+    </div>
+  </nav>
+</header>
+
+<main class="wrap">
+  <!-- Schedule -->
+  <section id="schedule" class="section" aria-labelledby="h-schedule">
+    <header id="h-schedule">Schedule & Timings</header>
+    <div class="content">
+      <p class="muted small">Charleston pilot. Dates and labels are pre-filled; values are read-only for the crew.</p>
+      <div class="kv">
+        <div class="muted">Sick parade</div><div>0800–0900 (set per port)</div>
+        <div class="muted">Local emergency</div><div id="local-emer">911 (United States)</div>
+      </div>
+      <div class="actions">
+        <a class="tab" id="er1-gmap" href="#" target="_blank" rel="noopener">MUSC Health ED (Google)</a>
+        <a class="tab" id="er1-amap" href="#" target="_blank" rel="noopener">MUSC Health ED (Apple)</a>
+        <a class="tab" id="er2-gmap" href="#" target="_blank" rel="noopener">Roper Hospital ED (Google)</a>
+        <a class="tab" id="er2-amap" href="#" target="_blank" rel="noopener">Roper Hospital ED (Apple)</a>
+      </div><div id="local-emer">911 (Canada); adjust for foreign ports</div>
+      </div>
+      <div class="small muted">Nearest ER links and specifics added per city later.</div>
+    </div>
+  </section>
+
+  <!-- Maps & Local -->
+  <section id="maps" class="section" aria-labelledby="h-maps">
+    <header id="h-maps">Maps & Local Info</header>
+    <div class="content">
+      <div>Terminal/meet point: <span id="terminal-note" class="muted">Charleston Cruise Terminal (196 Concord St) — no berth numbers on public page.</span></div>
+      <div class="actions">
+        <a class="tab" id="terminal-gmap" href="#" target="_blank" rel="noopener">Open in Google Maps</a>
+        <a class="tab" id="terminal-amap" href="#" target="_blank" rel="noopener">Open in Apple Maps</a>
+      </div>
+      <div class="small muted">Embassy/consulate and safe taxi pickup notes can be added per city.</div>
+    </div>
+  </section>
+
+  <!-- Enjoy -->
+  <section id="enjoy" class="section" aria-labelledby="h-enjoy">
+    <header id="h-enjoy">Enjoy Your Stay</header>
+    <div class="content">
+      <ul class="small" style="margin:0 0 0 1rem">
+        <li>
+          <div class="actions">
+            <a class="tab" id="eat-gmap" href="#" target="_blank" rel="noopener">Restaurants (Google)</a>
+            <a class="tab" id="eat-amap" href="#" target="_blank" rel="noopener">Restaurants (Apple)</a>
+            <a class="tab" id="bars-gmap" href="#" target="_blank" rel="noopener">Bars & Breweries</a>
+          </div>
+        </li>
+        <li>
+          <div class="actions">
+            <a class="tab" id="museums-gmap" href="#" target="_blank" rel="noopener">Museums & Attractions</a>
+            <a class="tab" id="theatres-gmap" href="#" target="_blank" rel="noopener">Theatres & Cinemas</a>
+          </div>
+        </li>
+        <li>
+          <div class="actions">
+            <a class="tab" id="events-today" href="#" target="_blank" rel="noopener">Events Today</a>
+            <a class="tab" id="events-weekend" href="#" target="_blank" rel="noopener">This Weekend</a>
+            <a class="tab" id="events-range" href="#" target="_blank" rel="noopener">Your Dates</a>
+          </div>
+        </li>
+        <li>
+          <div class="actions">
+            <a class="tab" id="groceries-gmap" href="#" target="_blank" rel="noopener">Groceries & Convenience</a>
+            <a class="tab" id="atms-gmap" href="#" target="_blank" rel="noopener">ATMs & Banks</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Notices -->
+  <section id="notices" class="section" aria-labelledby="h-notices">
+    <header id="h-notices">Notices & Updates</header>
+    <div class="content">
+      <p class="small">For awareness only. Report corrections to a role inbox.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap muted small">For awareness only. Do not publish future movements.</div>
+</footer>
+
+<script>
+(function(){
+  // Theme toggle
+  const root=document.documentElement; const btn=document.getElementById('theme-toggle');
+  const key='theme', saved=localStorage.getItem(key);
+  if(saved==='dark' || saved==='light') root.setAttribute('data-theme', saved);
+  const sync=()=>{ const cur=root.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'); if(btn) btn.textContent = (cur==='dark')?'🌙':'☀️'; };
+  const toggle=()=>{ const cur=root.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'); const next=(cur==='dark')?'light':'dark'; root.setAttribute('data-theme',next); localStorage.setItem(key,next); sync(); };
+  btn&&btn.addEventListener('click',toggle); sync();
+
+  // City: from ?city= query or leave default
+  const params=new URLSearchParams(location.search);
+  const city=params.get('city')||''; if(city){ document.getElementById('city').textContent=city; document.title='Port Visit — '+city; }
+
+  // Time label (DST-aware using provided/host tz; overrideable later)
+  const tz=params.get('tz')||Intl.DateTimeFormat().resolvedOptions().timeZone; // fallback device tz
+  const tzEl=document.getElementById('tz-abbr'); const timeEl=document.getElementById('local-time');
+  function abbr(date){
+    try{
+      const f=new Intl.DateTimeFormat('en', {timeZone:tz, timeZoneName:'short'}).formatToParts(date);
+      const part=f.find(p=>p.type==='timeZoneName'); return part?part.value.replace(/^GMT[+-]\d+$/,'Local'): 'Local';
+    }catch(_){ return 'Local'; }
+  }
+  function tick(){ try{ const now=new Date(); timeEl.textContent=new Intl.DateTimeFormat([], {hour:'2-digit',minute:'2-digit',hour12:false,timeZone:tz}).format(now); tzEl.textContent=abbr(now); }catch(_){ timeEl.textContent='—:—'; tzEl.textContent='Local'; } }
+  tick(); setInterval(tick,1000);
+
+  // Sticky tab selected state (visual only)
+  function setTabSel(){ const hash=location.hash||'#schedule'; document.querySelectorAll('.tab').forEach(a=>a.setAttribute('aria-selected', a.getAttribute('href')===hash ? 'true':'false')); }
+  window.addEventListener('hashchange', setTabSel); setTabSel();
+})();
+</script>
+</body>
+</html>
